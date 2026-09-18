@@ -12,8 +12,14 @@
       ],
       "variants": [
         {
-          "標籤": "標準版",
-          "檔案": "assets/台積電_TSMC_logo.svg",
+          "標籤": "完整版（含晶圓網格圖案）",
+          "檔案": "assets/台積電_TSMC_logo_完整版.svg",
+          "來源網址": "https://en.wikipedia.org/wiki/File:Tsmc.svg",
+          "版權備註": "台積電官方註冊商標，Wikipedia 非自由內容(fair use)方式收錄，僅供內部新聞/報導用途做識別性使用，不得作商業改作"
+        },
+        {
+          "標籤": "純文字版",
+          "檔案": "assets/台積電_TSMC_logo_純文字版.svg",
           "來源網址": "https://commons.wikimedia.org/wiki/File:TSMC_wordmark.svg",
           "版權備註": "Wikimedia Commons，僅供內部新聞/報導用途使用"
         }
