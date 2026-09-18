@@ -5,15 +5,206 @@
     {
       "中文名稱": "台積電",
       "英文名稱": "TSMC",
-      "別名": ["台灣積體電路", "Taiwan Semiconductor"],
+      "別名": [
+        "台灣積體電路",
+        "Taiwan Semiconductor"
+      ],
       "檔案": {
-        "png": "assets/台積電_TSMC_logo.png",
+        "svg": "assets/台積電_TSMC_logo.svg",
+        "png": null
+      },
+      "來源網址": "https://commons.wikimedia.org/wiki/File:TSMC_wordmark.svg",
+      "版權備註": "Wikimedia Commons，僅供內部新聞/報導用途使用",
+      "新增日期": "2026-09-18"
+    },
+    {
+      "中文名稱": "美光",
+      "英文名稱": "Micron",
+      "別名": [
+        "Micron Technology"
+      ],
+      "檔案": {
+        "svg": "assets/美光_Micron_logo.svg",
+        "png": null
+      },
+      "來源網址": "https://commons.wikimedia.org/wiki/File:Micron_Technology_logo_2024.svg",
+      "版權備註": "Wikimedia Commons，僅供內部新聞/報導用途使用",
+      "新增日期": "2026-09-18"
+    },
+    {
+      "中文名稱": "環球晶",
+      "英文名稱": "GlobalWafers",
+      "別名": [
+        "環球晶圓"
+      ],
+      "檔案": {
+        "png": "assets/環球晶_GlobalWafers_logo.png",
         "svg": null
       },
-      "來源網址": "https://www.tsmc.com/",
-      "版權備註": "官方媒體資源，僅供內部新聞/報導用途使用",
+      "來源網址": "https://www.sas-globalwafers.com/",
+      "版權備註": "官網擷取，僅供內部新聞/報導用途使用",
+      "新增日期": "2026-09-18"
+    },
+    {
+      "中文名稱": "英特爾",
+      "英文名稱": "Intel",
+      "別名": [
+        "Intel Corporation"
+      ],
+      "檔案": {
+        "svg": "assets/英特爾_Intel_logo.svg",
+        "png": null
+      },
+      "來源網址": "https://commons.wikimedia.org/wiki/File:Intel_logo_2023.svg",
+      "版權備註": "Wikimedia Commons，僅供內部新聞/報導用途使用",
+      "新增日期": "2026-09-18"
+    },
+    {
+      "中文名稱": "輝達",
+      "英文名稱": "NVIDIA",
+      "別名": [
+        "NVIDIA Corporation",
+        "NV"
+      ],
+      "檔案": {
+        "svg": "assets/輝達_NVIDIA_logo.svg",
+        "png": null
+      },
+      "來源網址": "https://commons.wikimedia.org/wiki/File:NVIDIA_logo.svg",
+      "版權備註": "Wikimedia Commons，僅供內部新聞/報導用途使用",
+      "新增日期": "2026-09-18"
+    },
+    {
+      "中文名稱": "中美晶",
+      "英文名稱": "SAS",
+      "別名": [
+        "Sino-American Silicon Products",
+        "中美矽晶"
+      ],
+      "檔案": {
+        "png": "assets/中美晶_SAS_logo.png",
+        "svg": null
+      },
+      "來源網址": "https://www.saswafer.com/",
+      "版權備註": "官網擷取，僅供內部新聞/報導用途使用",
+      "新增日期": "2026-09-18"
+    },
+    {
+      "中文名稱": "台塑集團",
+      "英文名稱": "Formosa Plastics Group",
+      "別名": [
+        "台塑"
+      ],
+      "檔案": {
+        "svg": "assets/台塑集團_FormosaPlasticsGroup_logo.svg",
+        "png": null
+      },
+      "來源網址": "https://commons.wikimedia.org/wiki/File:Formosa_Plastics_Corporation_-_Logo.svg",
+      "版權備註": "Wikimedia Commons，僅供內部新聞/報導用途使用",
+      "新增日期": "2026-09-18"
+    },
+    {
+      "中文名稱": "SUMCO",
+      "英文名稱": "SUMCO",
+      "別名": [
+        "SUMCO Corporation"
+      ],
+      "檔案": {
+        "svg": "assets/SUMCO_SUMCO_logo.svg",
+        "png": null
+      },
+      "來源網址": "https://commons.wikimedia.org/wiki/File:Sumco_Logo.svg",
+      "版權備註": "Wikimedia Commons，僅供內部新聞/報導用途使用",
+      "新增日期": "2026-09-18"
+    },
+    {
+      "中文名稱": "台勝科",
+      "英文名稱": "Formosa Sumco Technology",
+      "別名": [
+        "FST"
+      ],
+      "檔案": {
+        "svg": "assets/台勝科_FormosaSumcoTechnology_logo.svg",
+        "png": null
+      },
+      "來源網址": "https://commons.wikimedia.org/wiki/File:Formosa_Sumco_Technology_logo.svg",
+      "版權備註": "Wikimedia Commons，僅供內部新聞/報導用途使用",
+      "新增日期": "2026-09-18"
+    },
+    {
+      "中文名稱": "合晶",
+      "英文名稱": "Wafer Works",
+      "別名": [
+        "合晶科技",
+        "Wafer Works Corporation"
+      ],
+      "檔案": {
+        "png": null,
+        "svg": null
+      },
+      "來源網址": "https://www.waferworks.com/",
+      "版權備註": "尚未找到可用檔案（官網 logo 為文字非圖檔），需手動處理",
       "新增日期": "2026-09-18",
-      "_範例資料": "這是範例，測試完可刪除"
+      "_狀態": "待補"
+    },
+    {
+      "中文名稱": "Siltronic",
+      "英文名稱": "Siltronic",
+      "別名": [
+        "Siltronic AG"
+      ],
+      "檔案": {
+        "svg": "assets/Siltronic_Siltronic_logo.svg",
+        "png": null
+      },
+      "來源網址": "https://commons.wikimedia.org/wiki/File:Siltronic_Logo.svg",
+      "版權備註": "Wikimedia Commons，僅供內部新聞/報導用途使用",
+      "新增日期": "2026-09-18"
+    },
+    {
+      "中文名稱": "嘉晶",
+      "英文名稱": "Episil-Precision",
+      "別名": [
+        "嘉晶電子",
+        "EPi"
+      ],
+      "檔案": {
+        "png": null,
+        "svg": null
+      },
+      "來源網址": "https://www.epi.episil.com/",
+      "版權備註": "官網無法連線（503），需手動處理",
+      "新增日期": "2026-09-18",
+      "_狀態": "待補"
+    },
+    {
+      "中文名稱": "昇陽半導體",
+      "英文名稱": "Phoenix Silicon International",
+      "別名": [
+        "PSI",
+        "昇陽國際半導體"
+      ],
+      "檔案": {
+        "png": "assets/昇陽半導體_PhoenixSiliconInternational_logo.png",
+        "svg": null
+      },
+      "來源網址": "https://www.psi.com.tw/",
+      "版權備註": "官網擷取，僅供內部新聞/報導用途使用",
+      "新增日期": "2026-09-18"
+    },
+    {
+      "中文名稱": "蘋果",
+      "英文名稱": "Apple",
+      "別名": [
+        "Apple Inc."
+      ],
+      "檔案": {
+        "svg": "assets/蘋果_Apple_logo.svg",
+        "png": null
+      },
+      "來源網址": "https://commons.wikimedia.org/wiki/File:Apple_logo_black.svg",
+      "版權備註": "Wikimedia Commons，僅供內部新聞/報導用途使用",
+      "新增日期": "2026-09-18"
     }
   ]
 }
