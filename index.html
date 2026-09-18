@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>品牌 Logo 素材庫</title>
+<style>
+  :root{
+    --bg:#fafafa; --card:#fff; --text:#1a1a1a; --muted:#6b6b6b;
+    --border:#e5e5e5; --accent:#2563eb;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#121212; --card:#1c1c1c; --text:#f0f0f0; --muted:#9a9a9a;
+      --border:#333; --accent:#60a5fa;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#121212; --card:#1c1c1c; --text:#f0f0f0; --muted:#9a9a9a;
+    --border:#333; --accent:#60a5fa;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; background:var(--bg); color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    padding:24px 16px;
+  }
+  .wrap{max-width:900px; margin:0 auto;}
+  h1{font-size:1.4rem; margin-bottom:4px;}
+  p.sub{color:var(--muted); margin-top:0; font-size:0.9rem;}
+  input#search{
+    width:100%; padding:12px 14px; font-size:1rem;
+    border:1px solid var(--border); border-radius:8px;
+    background:var(--card); color:var(--text); margin:16px 0;
+  }
+  .grid{
+    display:grid; grid-template-columns:repeat(auto-fill,minmax(180px,1fr));
+    gap:12px;
+  }
+  .card{
+    background:var(--card); border:1px solid var(--border); border-radius:10px;
+    padding:14px; text-align:center;
+  }
+  .card img{
+    max-width:100%; max-height:60px; object-fit:contain; margin-bottom:8px;
+    background:repeating-conic-gradient(#ddd 0% 25%, transparent 0% 50%) 50%/16px 16px;
+  }
+  .card .name-zh{font-weight:600; font-size:0.95rem;}
+  .card .name-en{color:var(--muted); font-size:0.8rem;}
+  .card a{
+    display:inline-block; margin-top:8px; font-size:0.8rem;
+    color:var(--accent); text-decoration:none;
+  }
+  .empty{color:var(--muted); text-align:center; padding:40px 0;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>品牌 Logo 素材庫</h1>
+  <p class="sub">輸入中文名、英文名或別名搜尋</p>
+  <input id="search" type="text" placeholder="例如：台積電 / TSMC">
+  <div id="grid" class="grid"></div>
+  <div id="empty" class="empty" style="display:none;">沒有找到符合的 logo，去背下載後記得加進 index.json</div>
+</div>
+
+<script>
+let allLogos = [];
+
+async function loadData(){
+  try{
+    const res = await fetch('index.json');
+    const data = await res.json();
+    allLogos = data.logos || [];
+    render(allLogos);
+  }catch(e){
+    document.getElementById('grid').innerHTML =
+      '<div class="empty">讀取 index.json 失敗</div>';
+  }
+}
+
+function render(list){
+  const grid = document.getElementById('grid');
+  const empty = document.getElementById('empty');
+  grid.innerHTML = '';
+  if(!list.length){ empty.style.display='block'; return; }
+  empty.style.display='none';
+  list.forEach(item=>{
+    if(item._範例資料) return; // 略過範例資料
+    const file = (item.檔案 && (item.檔案.png || item.檔案.svg)) || '';
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.innerHTML = `
+      <img src="${file}" alt="${item.中文名稱}" onerror="this.style.opacity=0.2">
+      <div class="name-zh">${item.中文名稱 || ''}</div>
+      <div class="name-en">${item.英文名稱 || ''}</div>
+      ${file ? `<a href="${file}" download>下載</a>` : ''}
+    `;
+    grid.appendChild(card);
+  });
+}
+
+document.getElementById('search').addEventListener('input', (e)=>{
+  const q = e.target.value.trim().toLowerCase();
+  if(!q){ render(allLogos); return; }
+  const filtered = allLogos.filter(item=>{
+    const pool = [
+      item.中文名稱, item.英文名稱, ...(item.別名||[])
+    ].join(' ').toLowerCase();
+    return pool.includes(q);
+  });
+  render(filtered);
+});
+
+loadData();
+</script>
+</body>
+</html>
