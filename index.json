@@ -1,7 +1,8 @@
 {
-  "_說明": "logo 素材庫索引。每次新增 logo 都要在這裡加一筆。AI 查詢時先讀這份檔案比對是否已存在，避免重複搜尋下載。",
-  "_命名規則": "中文名_英文名_logo.副檔名，例如：台積電_TSMC_logo.png",
-  "logos": [
+  "_說明": "logo 素材庫索引。每家公司可以有多個版本(variants)，例如直式/橫式/單色版。AI 查詢時先讀這份檔案比對是否已存在，避免重複搜尋下載。",
+  "_命名規則": "中文名_英文名_logo_[版本標籤].副檔名，例如：輝達_NVIDIA_logo_直式.svg；只有單一版本時標籤可省略，例如：台積電_TSMC_logo.svg",
+  "_版本標籤說明": "常見標籤：橫式、直式、標準版、單色版、白色版、icon版。只有在確認官方真的有提供該版本時才新增，不會憑空生成假的排版變體。",
+  "companies": [
     {
       "中文名稱": "台積電",
       "英文名稱": "TSMC",
@@ -9,12 +10,14 @@
         "台灣積體電路",
         "Taiwan Semiconductor"
       ],
-      "檔案": {
-        "svg": "assets/台積電_TSMC_logo.svg",
-        "png": null
-      },
-      "來源網址": "https://commons.wikimedia.org/wiki/File:TSMC_wordmark.svg",
-      "版權備註": "Wikimedia Commons，僅供內部新聞/報導用途使用",
+      "variants": [
+        {
+          "標籤": "標準版",
+          "檔案": "assets/台積電_TSMC_logo.svg",
+          "來源網址": "https://commons.wikimedia.org/wiki/File:TSMC_wordmark.svg",
+          "版權備註": "Wikimedia Commons，僅供內部新聞/報導用途使用"
+        }
+      ],
       "新增日期": "2026-09-18"
     },
     {
@@ -23,12 +26,14 @@
       "別名": [
         "Micron Technology"
       ],
-      "檔案": {
-        "svg": "assets/美光_Micron_logo.svg",
-        "png": null
-      },
-      "來源網址": "https://commons.wikimedia.org/wiki/File:Micron_Technology_logo_2024.svg",
-      "版權備註": "Wikimedia Commons，僅供內部新聞/報導用途使用",
+      "variants": [
+        {
+          "標籤": "標準版",
+          "檔案": "assets/美光_Micron_logo.svg",
+          "來源網址": "https://commons.wikimedia.org/wiki/File:Micron_Technology_logo_2024.svg",
+          "版權備註": "Wikimedia Commons，僅供內部新聞/報導用途使用"
+        }
+      ],
       "新增日期": "2026-09-18"
     },
     {
@@ -37,12 +42,14 @@
       "別名": [
         "環球晶圓"
       ],
-      "檔案": {
-        "png": "assets/環球晶_GlobalWafers_logo.png",
-        "svg": null
-      },
-      "來源網址": "https://www.sas-globalwafers.com/",
-      "版權備註": "官網擷取，僅供內部新聞/報導用途使用",
+      "variants": [
+        {
+          "標籤": "標準版",
+          "檔案": "assets/環球晶_GlobalWafers_logo.png",
+          "來源網址": "https://www.sas-globalwafers.com/",
+          "版權備註": "官網擷取，僅供內部新聞/報導用途使用"
+        }
+      ],
       "新增日期": "2026-09-18"
     },
     {
@@ -51,12 +58,14 @@
       "別名": [
         "Intel Corporation"
       ],
-      "檔案": {
-        "svg": "assets/英特爾_Intel_logo.svg",
-        "png": null
-      },
-      "來源網址": "https://commons.wikimedia.org/wiki/File:Intel_logo_2023.svg",
-      "版權備註": "Wikimedia Commons，僅供內部新聞/報導用途使用",
+      "variants": [
+        {
+          "標籤": "標準版",
+          "檔案": "assets/英特爾_Intel_logo.svg",
+          "來源網址": "https://commons.wikimedia.org/wiki/File:Intel_logo_2023.svg",
+          "版權備註": "Wikimedia Commons，僅供內部新聞/報導用途使用"
+        }
+      ],
       "新增日期": "2026-09-18"
     },
     {
@@ -66,12 +75,20 @@
         "NVIDIA Corporation",
         "NV"
       ],
-      "檔案": {
-        "svg": "assets/輝達_NVIDIA_logo.svg",
-        "png": null
-      },
-      "來源網址": "https://commons.wikimedia.org/wiki/File:NVIDIA_logo.svg",
-      "版權備註": "Wikimedia Commons，僅供內部新聞/報導用途使用",
+      "variants": [
+        {
+          "標籤": "直式（官方preferred）",
+          "檔案": "assets/輝達_NVIDIA_logo_直式.svg",
+          "來源網址": "https://www.nvidia.com/en-us/about-nvidia/legal-info/logo-brand-usage/",
+          "版權備註": "NVIDIA 官方品牌頁面下載，僅供內部新聞/報導用途使用"
+        },
+        {
+          "標籤": "橫式",
+          "檔案": "assets/輝達_NVIDIA_logo_橫式.svg",
+          "來源網址": "https://www.nvidia.com/en-us/about-nvidia/legal-info/logo-brand-usage/",
+          "版權備註": "NVIDIA 官方品牌頁面下載，僅供內部新聞/報導用途使用"
+        }
+      ],
       "新增日期": "2026-09-18"
     },
     {
@@ -81,12 +98,14 @@
         "Sino-American Silicon Products",
         "中美矽晶"
       ],
-      "檔案": {
-        "png": "assets/中美晶_SAS_logo.png",
-        "svg": null
-      },
-      "來源網址": "https://www.saswafer.com/",
-      "版權備註": "官網擷取，僅供內部新聞/報導用途使用",
+      "variants": [
+        {
+          "標籤": "標準版",
+          "檔案": "assets/中美晶_SAS_logo.png",
+          "來源網址": "https://www.saswafer.com/",
+          "版權備註": "官網擷取，僅供內部新聞/報導用途使用"
+        }
+      ],
       "新增日期": "2026-09-18"
     },
     {
@@ -95,12 +114,14 @@
       "別名": [
         "台塑"
       ],
-      "檔案": {
-        "svg": "assets/台塑集團_FormosaPlasticsGroup_logo.svg",
-        "png": null
-      },
-      "來源網址": "https://commons.wikimedia.org/wiki/File:Formosa_Plastics_Corporation_-_Logo.svg",
-      "版權備註": "Wikimedia Commons，僅供內部新聞/報導用途使用",
+      "variants": [
+        {
+          "標籤": "標準版",
+          "檔案": "assets/台塑集團_FormosaPlasticsGroup_logo.svg",
+          "來源網址": "https://commons.wikimedia.org/wiki/File:Formosa_Plastics_Corporation_-_Logo.svg",
+          "版權備註": "Wikimedia Commons，僅供內部新聞/報導用途使用"
+        }
+      ],
       "新增日期": "2026-09-18"
     },
     {
@@ -109,12 +130,14 @@
       "別名": [
         "SUMCO Corporation"
       ],
-      "檔案": {
-        "svg": "assets/SUMCO_SUMCO_logo.svg",
-        "png": null
-      },
-      "來源網址": "https://commons.wikimedia.org/wiki/File:Sumco_Logo.svg",
-      "版權備註": "Wikimedia Commons，僅供內部新聞/報導用途使用",
+      "variants": [
+        {
+          "標籤": "標準版",
+          "檔案": "assets/SUMCO_SUMCO_logo.svg",
+          "來源網址": "https://commons.wikimedia.org/wiki/File:Sumco_Logo.svg",
+          "版權備註": "Wikimedia Commons，僅供內部新聞/報導用途使用"
+        }
+      ],
       "新增日期": "2026-09-18"
     },
     {
@@ -123,12 +146,14 @@
       "別名": [
         "FST"
       ],
-      "檔案": {
-        "svg": "assets/台勝科_FormosaSumcoTechnology_logo.svg",
-        "png": null
-      },
-      "來源網址": "https://commons.wikimedia.org/wiki/File:Formosa_Sumco_Technology_logo.svg",
-      "版權備註": "Wikimedia Commons，僅供內部新聞/報導用途使用",
+      "variants": [
+        {
+          "標籤": "標準版",
+          "檔案": "assets/台勝科_FormosaSumcoTechnology_logo.svg",
+          "來源網址": "https://commons.wikimedia.org/wiki/File:Formosa_Sumco_Technology_logo.svg",
+          "版權備註": "Wikimedia Commons，僅供內部新聞/報導用途使用"
+        }
+      ],
       "新增日期": "2026-09-18"
     },
     {
@@ -138,14 +163,10 @@
         "合晶科技",
         "Wafer Works Corporation"
       ],
-      "檔案": {
-        "png": null,
-        "svg": null
-      },
-      "來源網址": "https://www.waferworks.com/",
-      "版權備註": "尚未找到可用檔案（官網 logo 為文字非圖檔），需手動處理",
+      "variants": [],
       "新增日期": "2026-09-18",
-      "_狀態": "待補"
+      "_狀態": "待補",
+      "待補備註": "尚未找到可用檔案（官網 logo 為文字非圖檔），需手動處理"
     },
     {
       "中文名稱": "Siltronic",
@@ -153,12 +174,14 @@
       "別名": [
         "Siltronic AG"
       ],
-      "檔案": {
-        "svg": "assets/Siltronic_Siltronic_logo.svg",
-        "png": null
-      },
-      "來源網址": "https://commons.wikimedia.org/wiki/File:Siltronic_Logo.svg",
-      "版權備註": "Wikimedia Commons，僅供內部新聞/報導用途使用",
+      "variants": [
+        {
+          "標籤": "標準版",
+          "檔案": "assets/Siltronic_Siltronic_logo.svg",
+          "來源網址": "https://commons.wikimedia.org/wiki/File:Siltronic_Logo.svg",
+          "版權備註": "Wikimedia Commons，僅供內部新聞/報導用途使用"
+        }
+      ],
       "新增日期": "2026-09-18"
     },
     {
@@ -168,14 +191,10 @@
         "嘉晶電子",
         "EPi"
       ],
-      "檔案": {
-        "png": null,
-        "svg": null
-      },
-      "來源網址": "https://www.epi.episil.com/",
-      "版權備註": "官網無法連線（503），需手動處理",
+      "variants": [],
       "新增日期": "2026-09-18",
-      "_狀態": "待補"
+      "_狀態": "待補",
+      "待補備註": "官網無法連線（503），需手動處理"
     },
     {
       "中文名稱": "昇陽半導體",
@@ -184,12 +203,14 @@
         "PSI",
         "昇陽國際半導體"
       ],
-      "檔案": {
-        "png": "assets/昇陽半導體_PhoenixSiliconInternational_logo.png",
-        "svg": null
-      },
-      "來源網址": "https://www.psi.com.tw/",
-      "版權備註": "官網擷取，僅供內部新聞/報導用途使用",
+      "variants": [
+        {
+          "標籤": "標準版",
+          "檔案": "assets/昇陽半導體_PhoenixSiliconInternational_logo.png",
+          "來源網址": "https://www.psi.com.tw/",
+          "版權備註": "官網擷取，僅供內部新聞/報導用途使用"
+        }
+      ],
       "新增日期": "2026-09-18"
     },
     {
@@ -198,12 +219,14 @@
       "別名": [
         "Apple Inc."
       ],
-      "檔案": {
-        "svg": "assets/蘋果_Apple_logo.svg",
-        "png": null
-      },
-      "來源網址": "https://commons.wikimedia.org/wiki/File:Apple_logo_black.svg",
-      "版權備註": "Wikimedia Commons，僅供內部新聞/報導用途使用",
+      "variants": [
+        {
+          "標籤": "標準版",
+          "檔案": "assets/蘋果_Apple_logo.svg",
+          "來源網址": "https://commons.wikimedia.org/wiki/File:Apple_logo_black.svg",
+          "版權備註": "Wikimedia Commons，僅供內部新聞/報導用途使用"
+        }
+      ],
       "新增日期": "2026-09-18"
     }
   ]

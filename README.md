@@ -13,9 +13,16 @@ logo-library/
 
 ## 命名規則
 
-`中文名_英文名_logo.副檔名`
+`中文名_英文名_logo_[版本標籤].副檔名`（只有單一版本時可省略標籤）
 
-例如：`台積電_TSMC_logo.png`、`台積電_TSMC_logo.svg`
+例如：
+- `台積電_TSMC_logo.svg`（只有一種版本）
+- `輝達_NVIDIA_logo_直式.svg`、`輝達_NVIDIA_logo_橫式.svg`（有多版本時）
+
+## 多版本（variants）說明
+
+`index.json` 中每家公司用 `variants` 陣列存放多個版本（直式/橫式/單色版等）。
+**只有在確認官方真的有提供該版本時才新增**（例如查到官方品牌頁面明確列出 vertical/horizontal），不要自己用同一張圖假造不同排版。
 
 ## 查找／新增流程
 
