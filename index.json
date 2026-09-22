@@ -234,6 +234,150 @@
         }
       ],
       "新增日期": "2026-09-18"
+    },
+    {
+      "中文名稱": "三星",
+      "英文名稱": "Samsung",
+      "別名": [
+        "Samsung Electronics"
+      ],
+      "variants": [
+        {
+          "標籤": "標準版",
+          "檔案": "assets/三星_Samsung_logo.svg",
+          "來源網址": "https://commons.wikimedia.org/wiki/File:Samsung_Black_icon.svg",
+          "版權備註": "Wikimedia Commons，僅供內部新聞/報導用途使用"
+        }
+      ],
+      "新增日期": "2026-09-22"
+    },
+    {
+      "中文名稱": "鎧俠",
+      "英文名稱": "Kioxia",
+      "別名": [],
+      "variants": [
+        {
+          "標籤": "標準版",
+          "檔案": "assets/鎧俠_Kioxia_logo.svg",
+          "來源網址": "https://commons.wikimedia.org/wiki/File:Kioxia.svg",
+          "版權備註": "Wikimedia Commons，僅供內部新聞/報導用途使用"
+        }
+      ],
+      "新增日期": "2026-09-22"
+    },
+    {
+      "中文名稱": "SK海力士",
+      "英文名稱": "SK Hynix",
+      "別名": [
+        "SK hynix"
+      ],
+      "variants": [
+        {
+          "標籤": "標準版",
+          "檔案": "assets/SK海力士_SKHynix_logo.svg",
+          "來源網址": "https://commons.wikimedia.org/wiki/File:SK_Hynix.svg",
+          "版權備註": "Wikimedia Commons，僅供內部新聞/報導用途使用"
+        }
+      ],
+      "新增日期": "2026-09-22"
+    },
+    {
+      "中文名稱": "旺宏",
+      "英文名稱": "Macronix",
+      "別名": [
+        "MXIC",
+        "旺宏電子"
+      ],
+      "variants": [
+        {
+          "標籤": "標準版",
+          "檔案": "assets/旺宏_Macronix_logo.svg",
+          "來源網址": "https://commons.wikimedia.org/wiki/File:Macronix_logo.svg",
+          "版權備註": "Wikimedia Commons，僅供內部新聞/報導用途使用"
+        }
+      ],
+      "新增日期": "2026-09-22"
+    },
+    {
+      "中文名稱": "群聯",
+      "英文名稱": "Phison",
+      "別名": [
+        "群聯電子"
+      ],
+      "variants": [
+        {
+          "標籤": "標準版",
+          "檔案": "assets/群聯_Phison_logo.svg",
+          "來源網址": "https://commons.wikimedia.org/wiki/File:Phison-logo.svg",
+          "版權備註": "Wikimedia Commons，僅供內部新聞/報導用途使用"
+        }
+      ],
+      "新增日期": "2026-09-22"
+    },
+    {
+      "中文名稱": "晶豪科",
+      "英文名稱": "ESMT",
+      "別名": [
+        "晶豪科技",
+        "Elite Semiconductor Microelectronics Tech"
+      ],
+      "variants": [
+        {
+          "標籤": "標準版",
+          "檔案": "assets/晶豪科_ESMT_logo.png",
+          "來源網址": "https://www.esmt.com.tw/",
+          "版權備註": "官網擷取，僅供內部新聞/報導用途使用"
+        }
+      ],
+      "新增日期": "2026-09-22"
+    },
+    {
+      "中文名稱": "宇瞻",
+      "英文名稱": "Apacer",
+      "別名": [
+        "宇瞻科技"
+      ],
+      "variants": [
+        {
+          "標籤": "標準版",
+          "檔案": "assets/宇瞻_Apacer_logo.jpg",
+          "來源網址": "https://commons.wikimedia.org/wiki/File:Apacer_Technology_logo.jpg",
+          "版權備註": "Wikimedia Commons，僅供內部新聞/報導用途使用"
+        }
+      ],
+      "新增日期": "2026-09-22"
+    },
+    {
+      "中文名稱": "威剛",
+      "英文名稱": "ADATA",
+      "別名": [
+        "威剛科技"
+      ],
+      "variants": [
+        {
+          "標籤": "標準版",
+          "檔案": "assets/威剛_ADATA_logo.svg",
+          "來源網址": "https://commons.wikimedia.org/wiki/File:Adata_wordmark.svg",
+          "版權備註": "Wikimedia Commons，僅供內部新聞/報導用途使用"
+        }
+      ],
+      "新增日期": "2026-09-22"
+    },
+    {
+      "中文名稱": "創見",
+      "英文名稱": "Transcend",
+      "別名": [
+        "創見資訊"
+      ],
+      "variants": [
+        {
+          "標籤": "標準版",
+          "檔案": "assets/創見_Transcend_logo.svg",
+          "來源網址": "https://commons.wikimedia.org/wiki/File:Transcend_Logo.svg",
+          "版權備註": "Wikimedia Commons，僅供內部新聞/報導用途使用"
+        }
+      ],
+      "新增日期": "2026-09-22"
     }
   ]
 }
