@@ -175,7 +175,9 @@ async function loadData(){
   try{
     const res = await fetch('index.json');
     const data = await res.json();
-    allCompanies = data.companies || [];
+    allCompanies = (data.companies || []).slice().sort((a,b)=>
+      (b.新增日期||'') .localeCompare(a.新增日期||'')
+    );
     render(allCompanies);
   }catch(e){
     document.getElementById('grid').innerHTML =
