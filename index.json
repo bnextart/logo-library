@@ -389,6 +389,305 @@
         }
       ],
       "新增日期": "2026-09-22"
+    },
+    {
+      "中文名稱": "三星電機",
+      "英文名稱": "Samsung Electro-Mechanics",
+      "別名": [
+        "SEM",
+        "三星電子零組件"
+      ],
+      "variants": [
+        {
+          "標籤": "標準版",
+          "檔案": "assets/三星電機_SamsungElectroMechanics_logo.svg",
+          "來源網址": "https://commons.wikimedia.org/wiki/File:Samsung_Electro-Mechanics_logo_(english).svg",
+          "版權備註": "Wikimedia Commons，僅供內部新聞/報導用途使用"
+        }
+      ],
+      "新增日期": "2026-09-24"
+    },
+    {
+      "中文名稱": "住友化學",
+      "英文名稱": "Sumitomo Chemical",
+      "別名": [],
+      "variants": [
+        {
+          "標籤": "標準版",
+          "檔案": "assets/住友化學_SumitomoChemical_logo.svg",
+          "來源網址": "https://commons.wikimedia.org/wiki/File:Sumitomo_Chemical_logo.svg",
+          "版權備註": "Wikimedia Commons，僅供內部新聞/報導用途使用"
+        }
+      ],
+      "新增日期": "2026-09-24"
+    },
+    {
+      "中文名稱": "大日本印刷",
+      "英文名稱": "Dai Nippon Printing",
+      "別名": [
+        "DNP"
+      ],
+      "variants": [
+        {
+          "標籤": "標準版",
+          "檔案": "assets/DNP大日本印刷_DaiNipponPrinting_logo.svg",
+          "來源網址": "https://commons.wikimedia.org/wiki/File:Dai_Nippon_Printing_logo.svg",
+          "版權備註": "Wikimedia Commons，僅供內部新聞/報導用途使用"
+        }
+      ],
+      "新增日期": "2026-09-24"
+    },
+    {
+      "中文名稱": "揖斐電",
+      "英文名稱": "Ibiden",
+      "別名": [],
+      "variants": [
+        {
+          "標籤": "標準版",
+          "檔案": "assets/揖斐電_Ibiden_logo.svg",
+          "來源網址": "https://commons.wikimedia.org/wiki/File:Ibiden_company_logo.svg",
+          "版權備註": "Wikimedia Commons，僅供內部新聞/報導用途使用"
+        }
+      ],
+      "新增日期": "2026-09-24"
+    },
+    {
+      "中文名稱": "群創光電",
+      "英文名稱": "Innolux",
+      "別名": [
+        "群創",
+        "Chimei Innolux"
+      ],
+      "variants": [
+        {
+          "標籤": "標準版",
+          "檔案": "assets/群創光電_Innolux_logo.svg",
+          "來源網址": "https://commons.wikimedia.org/wiki/File:INNOLUX_logo.svg",
+          "版權備註": "Wikimedia Commons，僅供內部新聞/報導用途使用"
+        }
+      ],
+      "新增日期": "2026-09-24"
+    },
+    {
+      "中文名稱": "欣興電子",
+      "英文名稱": "Unimicron",
+      "別名": [
+        "欣興"
+      ],
+      "variants": [
+        {
+          "標籤": "標準版",
+          "檔案": "assets/欣興電子_Unimicron_logo.svg",
+          "來源網址": "https://commons.wikimedia.org/wiki/File:Unimicron_Technology_logo.svg",
+          "版權備註": "Wikimedia Commons，僅供內部新聞/報導用途使用"
+        }
+      ],
+      "新增日期": "2026-09-24"
+    },
+    {
+      "中文名稱": "宸鴻",
+      "英文名稱": "TPK-KY",
+      "別名": [
+        "TPK",
+        "TPK Holding",
+        "宸鴻光電科技"
+      ],
+      "variants": [
+        {
+          "標籤": "標準版",
+          "檔案": "assets/TPK-KY宸鴻_TPK-KY_logo.png",
+          "來源網址": "https://www.tpk.com/",
+          "版權備註": "官網擷取，僅供內部新聞/報導用途使用"
+        }
+      ],
+      "新增日期": "2026-09-24"
+    },
+    {
+      "中文名稱": "康寧",
+      "英文名稱": "Corning",
+      "別名": [
+        "康寧公司",
+        "Corning Incorporated"
+      ],
+      "variants": [
+        {
+          "標籤": "標準版",
+          "檔案": "assets/康寧_Corning_logo.svg",
+          "來源網址": "https://commons.wikimedia.org/wiki/File:Corning_Incorporated_Logo.svg",
+          "版權備註": "Wikimedia Commons，僅供內部新聞/報導用途使用"
+        }
+      ],
+      "新增日期": "2026-09-24"
+    },
+    {
+      "中文名稱": "南電",
+      "英文名稱": "Nan Ya PCB",
+      "別名": [
+        "南亞電路板"
+      ],
+      "variants": [
+        {
+          "標籤": "標準版",
+          "檔案": "assets/南電_NanYaPCB_logo.png",
+          "來源網址": "https://www.nanyapcb.com.tw/",
+          "版權備註": "官網擷取，僅供內部新聞/報導用途使用"
+        }
+      ],
+      "新增日期": "2026-09-24"
+    },
+    {
+      "中文名稱": "景碩科技",
+      "英文名稱": "Kinsus",
+      "別名": [
+        "景碩",
+        "Kinsus Interconnect Technology"
+      ],
+      "variants": [
+        {
+          "標籤": "標準版",
+          "檔案": "assets/景碩科技_Kinsus_logo.png",
+          "來源網址": "https://www.kinsus.com.tw/",
+          "版權備註": "官網擷取，僅供內部新聞/報導用途使用"
+        }
+      ],
+      "新增日期": "2026-09-24"
+    },
+    {
+      "中文名稱": "晶呈科技",
+      "英文名稱": "INGENTEC",
+      "別名": [],
+      "variants": [
+        {
+          "標籤": "標準版",
+          "檔案": "assets/晶呈科技_INGENTEC_logo.png",
+          "來源網址": "http://www.ingenteccorp.com",
+          "版權備註": "官網擷取，僅供內部新聞/報導用途使用"
+        }
+      ],
+      "新增日期": "2026-09-24"
+    },
+    {
+      "中文名稱": "川寶",
+      "英文名稱": "CBT",
+      "別名": [
+        "川寶科技",
+        "Chime Ball Technology"
+      ],
+      "variants": [
+        {
+          "標籤": "標準版",
+          "檔案": "assets/川寶_CBT_logo.png",
+          "來源網址": "http://www.cbtech.com.tw",
+          "版權備註": "官網擷取，僅供內部新聞/報導用途使用"
+        }
+      ],
+      "新增日期": "2026-09-24"
+    },
+    {
+      "中文名稱": "鈦昇科技",
+      "英文名稱": "E&R",
+      "別名": [
+        "鈦昇",
+        "E&R Engineering Corporation"
+      ],
+      "variants": [
+        {
+          "標籤": "標準版",
+          "檔案": "assets/鈦昇科技_ER_logo.png",
+          "來源網址": "https://www.enr.com.tw/",
+          "版權備註": "官網擷取，僅供內部新聞/報導用途使用"
+        }
+      ],
+      "新增日期": "2026-09-24"
+    },
+    {
+      "中文名稱": "群翊工業",
+      "英文名稱": "Group Up",
+      "別名": [
+        "群翊"
+      ],
+      "variants": [
+        {
+          "標籤": "標準版",
+          "檔案": "assets/群翊工業_GroupUp_logo.png",
+          "來源網址": "https://www.gpline.com.tw/",
+          "版權備註": "官網擷取，僅供內部新聞/報導用途使用"
+        }
+      ],
+      "新增日期": "2026-09-24"
+    },
+    {
+      "中文名稱": "友威科技",
+      "英文名稱": "UVAT",
+      "別名": [
+        "友威科"
+      ],
+      "variants": [
+        {
+          "標籤": "標準版",
+          "檔案": "assets/友威科技_UVAT_logo.png",
+          "來源網址": "https://www.uvat.com/",
+          "版權備註": "官網擷取，僅供內部新聞/報導用途使用"
+        }
+      ],
+      "新增日期": "2026-09-24"
+    },
+    {
+      "中文名稱": "正達",
+      "英文名稱": "G-TECH",
+      "別名": [
+        "正達國際光電",
+        "GTOC"
+      ],
+      "variants": [],
+      "_狀態": "待補",
+      "待補備註": "官網為JS動態渲染，Commons與英文維基都查無圖檔",
+      "新增日期": "2026-09-24"
+    },
+    {
+      "中文名稱": "東捷",
+      "英文名稱": "Contrel",
+      "別名": [
+        "東捷科技",
+        "Contrel Technology"
+      ],
+      "variants": [],
+      "_狀態": "待補",
+      "待補備註": "官網為JS動態渲染，Commons與英文維基都查無圖檔",
+      "新增日期": "2026-09-24"
+    },
+    {
+      "中文名稱": "蔚華科",
+      "英文名稱": "Spirox",
+      "別名": [
+        "蔚華科技"
+      ],
+      "variants": [],
+      "_狀態": "待補",
+      "待補備註": "官網為JS動態渲染，查無圖檔",
+      "新增日期": "2026-09-24"
+    },
+    {
+      "中文名稱": "Absolics",
+      "英文名稱": "Absolics",
+      "別名": [
+        "SK Absolics"
+      ],
+      "variants": [],
+      "_狀態": "待補",
+      "待補備註": "官網為JS動態渲染，查無圖檔",
+      "新增日期": "2026-09-24"
+    },
+    {
+      "中文名稱": "GlaSSEM",
+      "英文名稱": "GlaSSEM",
+      "別名": [
+        "三星電機住友化學合資公司"
+      ],
+      "variants": [],
+      "_狀態": "待補",
+      "待補備註": "2026年新設立合資公司，暫無公開官方logo",
+      "新增日期": "2026-09-24"
     }
   ]
 }
