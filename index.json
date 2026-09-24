@@ -695,6 +695,41 @@
       "_狀態": "待補",
       "待補備註": "2026年新設立合資公司，暫無公開官方logo",
       "新增日期": "2026-09-24"
+    },
+    {
+      "中文名稱": "超微",
+      "英文名稱": "AMD",
+      "別名": [
+        "AMD",
+        "Advanced Micro Devices",
+        "超微半導體"
+      ],
+      "variants": [
+        {
+          "標籤": "標準版",
+          "檔案": "assets/AMD_AMD_logo.svg",
+          "來源網址": "https://commons.wikimedia.org/wiki/File:AMD_Logo.svg",
+          "版權備註": "Wikimedia Commons，僅供內部新聞/報導用途使用"
+        }
+      ],
+      "新增日期": "2026-09-24"
+    },
+    {
+      "中文名稱": "博通",
+      "英文名稱": "Broadcom",
+      "別名": [
+        "博通公司",
+        "Broadcom Inc."
+      ],
+      "variants": [
+        {
+          "標籤": "標準版",
+          "檔案": "assets/博通_Broadcom_logo.svg",
+          "來源網址": "https://commons.wikimedia.org/wiki/File:Broadcom_logo_(2016-present).svg",
+          "版權備註": "Wikimedia Commons，僅供內部新聞/報導用途使用"
+        }
+      ],
+      "新增日期": "2026-09-24"
     }
   ]
 }
