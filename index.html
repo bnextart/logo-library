@@ -53,6 +53,7 @@
     padding:6px 12px; border-radius:6px; font-size:0.85rem; cursor:pointer;
   }
   .toolbar button:hover{ border-color:var(--accent); color:var(--accent); }
+  .toolbar button.active{ border-color:var(--accent); color:#fff; background:var(--accent); }
   .grid{
     display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
     gap:14px;
@@ -125,10 +126,12 @@
       <h1>品牌 Logo 素材庫</h1>
       <p class="sub">輸入中文名、英文名或別名搜尋；每家公司若有多個版本（直式/橫式等）會一併顯示，可勾選多筆打包下載</p>
     </div>
-    <a class="claude-link" href="https://claude.ai/project/01a0c7f7-bf21-7319-84df-49d7713fcccf" target="_blank" rel="noopener">開始尋找/上傳 logo</a>
+    <a class="claude-link" href="https://claude.ai/share/aac73642-a039-40df-9d00-d1f606ee0960" target="_blank" rel="noopener">開始尋找/上傳 Logo</a>
   </div>
   <input id="search" type="text" placeholder="例如：台積電 / TSMC">
   <div class="toolbar">
+    <button id="favBtn" type="button">⭐ 常用Logo</button>
+    <button id="latestBtn" type="button">本次新增</button>
     <button id="selectAllBtn" type="button">全選目前結果</button>
     <button id="clearSelectBtn" type="button">清除選取</button>
     <span id="selCount">已選 0 筆</span>
@@ -148,7 +151,24 @@
 <script>
 let allCompanies = [];
 let currentList = [];
+let favOnly = false;
 const selected = new Set(); // key = 檔案路徑(唯一)
+
+function getFilteredList(){
+  const q = document.getElementById('search').value.trim().toLowerCase();
+  return allCompanies.filter(company=>{
+    if(favOnly && !company.常用) return false;
+    if(!q) return true;
+    const pool = [
+      company.中文名稱, company.英文名稱, ...(company.別名||[])
+    ].join(' ').toLowerCase();
+    return pool.includes(q);
+  });
+}
+
+function applyFilters(){
+  render(getFilteredList());
+}
 
 async function loadData(){
   try{
@@ -227,16 +247,26 @@ function updateToolbar(){
   document.getElementById('fabBar').style.display = n > 0 ? 'flex' : 'none';
 }
 
-document.getElementById('search').addEventListener('input', (e)=>{
-  const q = e.target.value.trim().toLowerCase();
-  if(!q){ render(allCompanies); return; }
-  const filtered = allCompanies.filter(company=>{
-    const pool = [
-      company.中文名稱, company.英文名稱, ...(company.別名||[])
-    ].join(' ').toLowerCase();
-    return pool.includes(q);
+document.getElementById('search').addEventListener('input', applyFilters);
+
+document.getElementById('favBtn').addEventListener('click', (e)=>{
+  favOnly = !favOnly;
+  e.target.classList.toggle('active', favOnly);
+  applyFilters();
+});
+
+document.getElementById('latestBtn').addEventListener('click', ()=>{
+  const dates = allCompanies.map(c=>c.新增日期).filter(Boolean);
+  if(!dates.length) return;
+  const latest = dates.reduce((a,b)=> (b > a ? b : a));
+  const latestCompanies = allCompanies.filter(c=> c.新增日期 === latest);
+  latestCompanies.forEach(company=>{
+    (company.variants||[]).forEach(v=> selected.add(v.檔案));
   });
-  render(filtered);
+  favOnly = false;
+  document.getElementById('favBtn').classList.remove('active');
+  document.getElementById('search').value = '';
+  render(latestCompanies);
 });
 
 document.getElementById('selectAllBtn').addEventListener('click', ()=>{
