@@ -158,7 +158,7 @@ const selected = new Set(); // key = 檔案路徑(唯一)
 
 function getFilteredList(){
   const q = document.getElementById('search').value.trim().toLowerCase();
-  return allCompanies.filter(company=>{
+  let list = allCompanies.filter(company=>{
     if(favOnly && !company.常用) return false;
     if(!q) return true;
     const pool = [
@@ -166,6 +166,12 @@ function getFilteredList(){
     ].join(' ').toLowerCase();
     return pool.includes(q);
   });
+  if(favOnly){
+    list = list.slice().sort((a,b)=>
+      (a.英文名稱||'').localeCompare(b.英文名稱||'', 'en', {sensitivity:'base'})
+    );
+  }
+  return list;
 }
 
 function applyFilters(){
