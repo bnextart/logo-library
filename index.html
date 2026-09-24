@@ -130,9 +130,10 @@
   </div>
   <input id="search" type="text" placeholder="例如：台積電 / TSMC">
   <div class="toolbar">
-    <button id="allBtn" type="button">全部Logo</button>
+    <button id="allBtn" type="button">A→Z</button>
+    <button id="newestBtn" type="button">新→舊</button>
     <button id="favBtn" type="button">⭐ 常用Logo</button>
-    <button id="latestBtn" type="button">本次新增</button>
+    <button id="latestBtn" type="button">本日新增</button>
     <button id="selectAllBtn" type="button">全選目前結果</button>
     <button id="clearSelectBtn" type="button">清除選取</button>
     <span id="selCount">已選 0 筆</span>
@@ -258,6 +259,16 @@ document.getElementById('allBtn').addEventListener('click', ()=>{
   document.getElementById('search').value = '';
   const sorted = [...allCompanies].sort((a,b)=>
     (a.英文名稱||'').localeCompare(b.英文名稱||'', 'en', {sensitivity:'base'})
+  );
+  render(sorted);
+});
+
+document.getElementById('newestBtn').addEventListener('click', ()=>{
+  favOnly = false;
+  document.getElementById('favBtn').classList.remove('active');
+  document.getElementById('search').value = '';
+  const sorted = [...allCompanies].sort((a,b)=>
+    (b.新增日期||'').localeCompare(a.新增日期||'')
   );
   render(sorted);
 });
