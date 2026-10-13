@@ -8,10 +8,10 @@
 <style>
   :root{
     color-scheme: light;
-    --bg:#e2e8f0; --surface:#ffffff; --text:#1F2A3C; --muted:#516070; --line:#e2e8f0;
+    --bg:#f5f5f5; --surface:#ffffff; --text:#1F2A3C; --muted:#516070; --line:#e2e8f0;
     --green:#22c55e; --green-dark:#16a34a; --blue:#87ceeb; --blue-dark:#5dade2;
     --green-tint:rgba(34,197,94,.14); --blue-soft:#d5eef8;
-    --on-green:#1F2A3C; --star-off:#94a3b8;
+    --on-green:#ffffff;
     --tile-a:#DCE1E5; --tile-b:#F6F8F9;
     --shadow-sm:0 1px 2px rgba(15,23,42,.06), 0 4px 12px -4px rgba(15,23,42,.10);
   }
@@ -19,14 +19,14 @@
     :root:not([data-theme="light"]){
       color-scheme: dark;
       --bg:#0E1417; --surface:#162026; --text:#E7EEF1; --muted:#94A3AD; --line:#243139;
-      --blue-soft:#1d3a4d; --star-off:#64748b;
+      --blue-soft:#1d3a4d;
       --shadow-sm:0 1px 2px rgba(0,0,0,.30), 0 4px 12px -4px rgba(0,0,0,.45);
     }
   }
   :root[data-theme="dark"]{
     color-scheme: dark;
     --bg:#0E1417; --surface:#162026; --text:#E7EEF1; --muted:#94A3AD; --line:#243139;
-    --blue-soft:#1d3a4d; --star-off:#64748b;
+    --blue-soft:#1d3a4d;
     --shadow-sm:0 1px 2px rgba(0,0,0,.30), 0 4px 12px -4px rgba(0,0,0,.45);
   }
   *{box-sizing:border-box;}
@@ -97,10 +97,10 @@
   .chip:hover{ border-color:var(--blue-dark); background:var(--blue-soft); }
   .chip:active{ transform:scale(.97); }
   .chip:focus-visible{ outline:2px solid var(--blue-dark); outline-offset:2px; }
-  .chip.active{ background:var(--green); border-color:var(--green); color:var(--on-green); }
-  .chip.active:hover{ background:var(--green-dark); border-color:var(--green-dark); }
+  .chip.active, .chip.active:hover{ background:var(--blue-dark); border-color:var(--blue-dark); color:#1F2A3C; }
   .chip.quiet{ border-color:transparent; background:transparent; }
-  .chip.quiet:hover{ background:var(--blue-soft); border-color:transparent; }
+  .chip.quiet:hover, .chip.quiet:focus-visible{ background:var(--green-tint); border-color:var(--green); }
+  .chip.quiet:focus-visible{ outline:2px solid var(--green-dark); outline-offset:2px; }
   .count-pill{
     display:inline-flex; align-items:center; height:32px; padding:0 12px; border-radius:999px;
     background:var(--green-tint); color:var(--text);
@@ -121,20 +121,17 @@
     background:var(--surface); border:none; border-radius:18px;
     padding:12px; box-shadow:var(--shadow-sm);
   }
-  .company-head{ text-align:center; padding:0 30px; }
+  .company-head{ text-align:center; }
+  .company-head.has-star{ padding:0 28px; }
   .company-head .name-zh{ font-weight:700; font-size:.95rem; line-height:1.35; overflow-wrap:anywhere; }
   .company-head .name-en{ color:var(--muted); font-size:.78rem; line-height:1.35; margin-top:1px; overflow-wrap:anywhere; }
 
-  /* 常用星號 */
+  /* 常用星號：只顯示共用清單狀態（不可點選） */
   .fav-star{
-    position:absolute; top:6px; right:6px; z-index:2;
-    display:grid; place-items:center; width:30px; height:30px; padding:0;
-    border:none; border-radius:10px; background:transparent;
-    color:var(--star-off); cursor:pointer;
+    position:absolute; top:8px; right:8px; z-index:2; width:22px; height:22px;
+    display:grid; place-items:center; color:var(--green); pointer-events:none;
   }
   .fav-star svg{ width:20px; height:20px; display:block; fill:currentColor; stroke:currentColor; stroke-width:1.4; stroke-linejoin:round; }
-  .fav-star[aria-pressed="true"]{ color:var(--green); }
-  .fav-star:focus-visible{ outline:2px solid var(--blue-dark); outline-offset:1px; }
 
   .variant-row{ display:flex; flex-direction:column; gap:12px; flex:1; }
   .variant{
@@ -182,13 +179,12 @@
   /* 下載：外框按鈕，固定在卡片底端 */
   .variant .dl-btn{
     margin-top:auto; display:flex; align-items:center; justify-content:center; gap:6px;
-    width:100%; height:34px; border:2px solid var(--green); border-radius:12px;
-    background:transparent; color:var(--text);
+    width:100%; height:34px; border:1px solid var(--green); border-radius:12px;
+    background:transparent; color:var(--green);
     font-size:.85rem; font-weight:600; text-decoration:none; cursor:pointer;
     transition:background-color .15s, border-color .15s, transform .05s;
   }
-  .variant .dl-btn svg{ color:var(--green-dark); }
-  .variant .dl-btn:hover{ background:var(--green-tint); border-color:var(--green-dark); }
+  .variant .dl-btn:hover{ background:var(--green-tint); border-color:var(--green-dark); color:var(--green-dark); }
   .variant .dl-btn:active{ transform:scale(.98); }
   .variant .dl-btn:focus-visible{ outline:2px solid var(--blue-dark); outline-offset:2px; }
 
@@ -270,42 +266,10 @@ let currentList = [];
 let favOnly = false;
 const selected = new Set(); // key = 檔案路徑(唯一)
 
-// 常用星號：以各人瀏覽器的 localStorage 記錄「與 index.json 預設值不同」的項目，不會寫回 index.json
-const FAV_STORE = 'logoLibrary.favOverrides.v1';
-function loadFavOverrides(){
-  try{
-    const o = JSON.parse(localStorage.getItem(FAV_STORE) || '{}');
-    return (o && typeof o === 'object') ? o : {};
-  }catch(e){ return {}; }
-}
-let favOverrides = loadFavOverrides();
-function saveFavOverrides(){
-  try{ localStorage.setItem(FAV_STORE, JSON.stringify(favOverrides)); }catch(e){}
-}
-function favKey(c){ return `${c.中文名稱 || ''}|${c.英文名稱 || ''}`; }
-function isFav(c){
-  const k = favKey(c);
-  return Object.prototype.hasOwnProperty.call(favOverrides, k) ? !!favOverrides[k] : !!c.常用;
-}
-function setStarState(btn, company){
-  const on = isFav(company);
-  const name = company.中文名稱 || company.英文名稱 || '';
-  btn.setAttribute('aria-pressed', on ? 'true' : 'false');
-  btn.setAttribute('aria-label', (on ? '取消常用：' : '加入常用：') + name);
-  btn.title = on ? '取消常用' : '加入常用';
-}
-function toggleFav(company, btn){
-  const next = !isFav(company);
-  const k = favKey(company);
-  if(next === !!company.常用){ delete favOverrides[k]; } else { favOverrides[k] = next; }
-  saveFavOverrides();
-  if(favOnly){ applyFilters(); } else { setStarState(btn, company); }
-}
-
 function getFilteredList(){
   const q = document.getElementById('search').value.trim().toLowerCase();
   let list = allCompanies.filter(company=>{
-    if(favOnly && !isFav(company)) return false;
+    if(favOnly && !company.常用) return false;
     if(!q) return true;
     const pool = [
       company.中文名稱, company.英文名稱, ...(company.別名||[])
@@ -358,13 +322,16 @@ function render(list){
     `;
     card.appendChild(head);
 
-    const star = document.createElement('button');
-    star.type = 'button';
-    star.className = 'fav-star';
-    star.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.85 5.95 6.5.85-4.75 4.5 1.2 6.45L12 17.3l-5.8 3.25 1.2-6.45L2.65 9.6l6.5-.85z"/></svg>';
-    setStarState(star, company);
-    star.addEventListener('click', (e)=>{ e.stopPropagation(); toggleFav(company, star); });
-    card.appendChild(star);
+    if(company.常用){
+      head.classList.add('has-star');
+      const star = document.createElement('span');
+      star.className = 'fav-star';
+      star.setAttribute('role', 'img');
+      star.setAttribute('aria-label', '常用 Logo');
+      star.title = '常用 Logo';
+      star.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.85 5.95 6.5.85-4.75 4.5 1.2 6.45L12 17.3l-5.8 3.25 1.2-6.45L2.65 9.6l6.5-.85z"/></svg>';
+      card.appendChild(star);
+    }
 
     const row = document.createElement('div');
     row.className = 'variant-row';
