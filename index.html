@@ -71,6 +71,7 @@
   .variant{
     position:relative; border:1px solid var(--border); border-radius:8px;
     padding:10px 10px 8px; text-align:center; background:var(--bg);
+    cursor:pointer; user-select:none; -webkit-user-select:none;
   }
   .variant.selected{ border-color:var(--accent); box-shadow:0 0 0 2px var(--accent) inset; }
   .variant .check{
@@ -245,6 +246,16 @@ function render(list){
       if(e.target.checked){ selected.add(key); } else { selected.delete(key); }
       e.target.closest('.variant').classList.toggle('selected', e.target.checked);
       updateToolbar();
+    });
+  });
+
+  // 點擊整塊卡片即可勾選/取消（下載連結與勾選框本身除外）
+  grid.querySelectorAll('.variant').forEach(card=>{
+    card.addEventListener('click', (e)=>{
+      if(e.target.closest('a') || e.target.classList.contains('check')) return;
+      const cb = card.querySelector('.check');
+      cb.checked = !cb.checked;
+      cb.dispatchEvent(new Event('change'));
     });
   });
 
