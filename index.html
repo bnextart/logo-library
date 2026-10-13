@@ -8,87 +8,80 @@
 <style>
   :root{
     color-scheme: light;
-    --bg:#F3F6F6; --surface:#FFFFFF; --text:#1F2A37; --muted:#667382; --line:#E1E8EB;
-    --primary:#0B7F6B; --primary-hover:#096A59; --primary-line:#14A38B;
-    --primary-soft:#E2F5F0; --primary-ink:#0B6B5B; --on-primary:#FFFFFF;
+    --bg:#e2e8f0; --surface:#ffffff; --text:#1F2A3C; --muted:#516070; --line:#e2e8f0;
+    --green:#22c55e; --green-dark:#16a34a; --blue:#87ceeb; --blue-dark:#5dade2;
+    --green-tint:rgba(34,197,94,.14); --blue-soft:#d5eef8;
+    --on-green:#1F2A3C; --star-off:#94a3b8;
     --tile-a:#DCE1E5; --tile-b:#F6F8F9;
-    --shadow-sm:0 1px 2px rgba(18,38,63,.05), 0 6px 16px -6px rgba(18,38,63,.10);
-    --shadow-md:0 2px 4px rgba(18,38,63,.06), 0 14px 30px -12px rgba(18,38,63,.20);
+    --shadow-sm:0 1px 2px rgba(15,23,42,.06), 0 4px 12px -4px rgba(15,23,42,.10);
   }
   @media (prefers-color-scheme: dark){
     :root:not([data-theme="light"]){
       color-scheme: dark;
       --bg:#0E1417; --surface:#162026; --text:#E7EEF1; --muted:#94A3AD; --line:#243139;
-      --primary:#2BC3A6; --primary-hover:#4AD3B9; --primary-line:#2BC3A6;
-      --primary-soft:#143B36; --primary-ink:#8FE8D6; --on-primary:#04211B;
-      --shadow-sm:0 1px 2px rgba(0,0,0,.30), 0 6px 16px -6px rgba(0,0,0,.45);
-      --shadow-md:0 2px 4px rgba(0,0,0,.35), 0 14px 30px -12px rgba(0,0,0,.60);
+      --blue-soft:#1d3a4d; --star-off:#64748b;
+      --shadow-sm:0 1px 2px rgba(0,0,0,.30), 0 4px 12px -4px rgba(0,0,0,.45);
     }
   }
   :root[data-theme="dark"]{
     color-scheme: dark;
     --bg:#0E1417; --surface:#162026; --text:#E7EEF1; --muted:#94A3AD; --line:#243139;
-    --primary:#2BC3A6; --primary-hover:#4AD3B9; --primary-line:#2BC3A6;
-    --primary-soft:#143B36; --primary-ink:#8FE8D6; --on-primary:#04211B;
-    --shadow-sm:0 1px 2px rgba(0,0,0,.30), 0 6px 16px -6px rgba(0,0,0,.45);
-    --shadow-md:0 2px 4px rgba(0,0,0,.35), 0 14px 30px -12px rgba(0,0,0,.60);
+    --blue-soft:#1d3a4d; --star-off:#64748b;
+    --shadow-sm:0 1px 2px rgba(0,0,0,.30), 0 4px 12px -4px rgba(0,0,0,.45);
   }
   *{box-sizing:border-box;}
   html{-webkit-text-size-adjust:100%;}
   body{
-    margin:0; color:var(--text); line-height:1.5;
-    background:radial-gradient(900px 360px at 50% -140px, rgba(20,163,139,.14), transparent 70%) no-repeat, var(--bg);
+    margin:0; background:var(--bg); color:var(--text); line-height:1.5;
     font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","PingFang TC","Noto Sans TC","Microsoft JhengHei","Segoe UI",system-ui,sans-serif;
-    padding:28px 16px 110px;
+    padding:32px 16px 110px;
   }
   .wrap{max-width:1200px; margin:0 auto;}
 
-  /* 標題列 */
-  .head-row{
-    display:flex; justify-content:space-between; align-items:flex-end;
-    gap:16px 24px; flex-wrap:wrap; margin-bottom:18px;
-  }
+  /* 頁首：置中標題＋說明 */
+  .head{ text-align:center; margin:8px auto 28px; }
   h1{
-    margin:0 0 6px; font-size:clamp(1.5rem,1.2rem + 1vw,1.9rem);
-    line-height:1.2; font-weight:800; letter-spacing:-.01em;
+    margin:0 0 10px; font-size:clamp(1.75rem,1.3rem + 1.6vw,2.25rem);
+    line-height:1.25; font-weight:700; letter-spacing:-.01em;
   }
-  p.sub{margin:0; color:var(--muted); font-size:.9rem; max-width:62ch;}
-  .claude-link{
-    flex-shrink:0; white-space:nowrap; display:inline-flex; align-items:center; justify-content:center;
-    height:42px; padding:0 20px; border-radius:12px;
-    background:var(--primary); color:var(--on-primary); text-decoration:none;
-    font-size:.9rem; font-weight:700;
-    box-shadow:0 8px 18px -8px rgba(11,127,107,.65);
-    transition:background-color .15s, transform .05s;
-  }
-  .claude-link:hover{ background:var(--primary-hover); }
-  .claude-link:active{ transform:translateY(1px); }
-  .claude-link:focus-visible{ outline:2px solid var(--primary-line); outline-offset:3px; }
+  p.sub{ margin:0 auto; max-width:38rem; color:var(--muted); font-size:1.02rem; line-height:1.65; }
 
-  /* 搜尋＋工具列 */
-  .controls{ position:relative; z-index:20; padding:4px 0 12px; }
+  /* 搜尋列＋上傳按鈕（同一排） */
+  .controls{ position:relative; z-index:20; padding:0 0 12px; }
   @media (min-width:720px){
     .controls{
       position:sticky; top:0; margin:0 -12px; padding:12px;
       background:var(--bg);
-      background:color-mix(in srgb, var(--bg) 86%, transparent);
-      -webkit-backdrop-filter:blur(10px) saturate(1.2); backdrop-filter:blur(10px) saturate(1.2);
     }
   }
+  .search-row{ display:flex; align-items:stretch; gap:12px; margin-bottom:12px; }
   input#search{
-    display:block; width:100%; height:48px; padding:0 16px 0 46px; margin:0 0 12px;
+    flex:1 1 0; min-width:0; height:48px; margin:0; padding:0 16px 0 46px;
     font:inherit; font-size:1rem; color:var(--text);
     background-color:var(--surface);
     background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2395A3AE' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='M20 20l-3.5-3.5'/%3E%3C/svg%3E");
     background-repeat:no-repeat; background-position:16px 50%; background-size:18px;
-    border:1px solid var(--line); border-radius:14px; box-shadow:var(--shadow-sm);
-    transition:border-color .15s, box-shadow .15s;
+    border:2px solid var(--line); border-radius:14px; box-shadow:none;
   }
   input#search::placeholder{ color:var(--muted); opacity:.8; }
-  input#search:focus{
-    outline:none; border-color:var(--primary-line);
-    box-shadow:0 0 0 4px rgba(20,163,139,.18);
+  input#search:focus{ outline:none; }
+  .claude-link{
+    flex-shrink:0; white-space:nowrap; display:inline-flex; align-items:center; justify-content:center;
+    height:48px; padding:0 22px; border-radius:14px;
+    background:var(--green); color:var(--on-green); text-decoration:none;
+    font-size:.95rem; font-weight:700;
+    transition:background-color .15s, transform .05s;
   }
+  .claude-link:hover{ background:var(--green-dark); }
+  .claude-link:active{ transform:translateY(1px); }
+  .claude-link:focus-visible{ outline:2px solid var(--blue-dark); outline-offset:3px; }
+  @media (max-width:640px){
+    .search-row{ flex-direction:column; }
+    input#search{ flex:none; width:100%; }
+    .claude-link{ width:100%; }
+  }
+
+  /* 篩選標籤 */
   .toolbar{
     display:flex; align-items:center; justify-content:space-between;
     flex-wrap:wrap; gap:10px 16px;
@@ -96,20 +89,21 @@
   .chip-group, .action-group{ display:flex; align-items:center; flex-wrap:wrap; gap:8px; }
   .chip{
     font:inherit; font-size:.85rem; font-weight:600; line-height:1;
-    height:34px; padding:0 14px; border-radius:999px;
-    border:1px solid var(--line); background:var(--surface); color:var(--text);
+    height:36px; padding:0 14px; border-radius:999px;
+    border:2px solid var(--line); background:var(--surface); color:var(--text);
     cursor:pointer;
-    transition:background-color .15s, border-color .15s, color .15s, transform .05s;
+    transition:background-color .15s, border-color .15s, transform .05s;
   }
-  .chip:hover{ border-color:var(--primary-line); background:var(--primary-soft); color:var(--primary-ink); }
+  .chip:hover{ border-color:var(--blue-dark); background:var(--blue-soft); }
   .chip:active{ transform:scale(.97); }
-  .chip:focus-visible{ outline:2px solid var(--primary-line); outline-offset:2px; }
-  .chip.active, .chip.active:hover{ background:var(--primary); border-color:var(--primary); color:var(--on-primary); }
-  .chip.quiet{ border-color:transparent; background:transparent; color:var(--primary-ink); }
-  .chip.quiet:hover{ background:var(--primary-soft); border-color:transparent; }
+  .chip:focus-visible{ outline:2px solid var(--blue-dark); outline-offset:2px; }
+  .chip.active{ background:var(--green); border-color:var(--green); color:var(--on-green); }
+  .chip.active:hover{ background:var(--green-dark); border-color:var(--green-dark); }
+  .chip.quiet{ border-color:transparent; background:transparent; }
+  .chip.quiet:hover{ background:var(--blue-soft); border-color:transparent; }
   .count-pill{
-    display:inline-flex; align-items:center; height:30px; padding:0 12px; border-radius:999px;
-    background:var(--primary-soft); color:var(--primary-ink);
+    display:inline-flex; align-items:center; height:32px; padding:0 12px; border-radius:999px;
+    background:var(--green-tint); color:var(--text);
     font-size:.82rem; font-weight:700;
   }
 
@@ -123,16 +117,25 @@
   @media (max-width:339px){ .grid{ grid-template-columns:minmax(0,1fr); } }
 
   .company-card{
-    display:flex; flex-direction:column; gap:8px;
-    background:var(--surface); border:1px solid var(--line); border-radius:18px;
+    position:relative; display:flex; flex-direction:column; gap:8px;
+    background:var(--surface); border:none; border-radius:18px;
     padding:12px; box-shadow:var(--shadow-sm);
-    transition:box-shadow .18s, border-color .18s;
   }
-  .company-card:hover{ box-shadow:var(--shadow-md); }
-  .company-card:has(.variant.selected){ border-color:var(--primary-line); }
-  .company-head{ text-align:center; }
+  .company-head{ text-align:center; padding:0 30px; }
   .company-head .name-zh{ font-weight:700; font-size:.95rem; line-height:1.35; overflow-wrap:anywhere; }
   .company-head .name-en{ color:var(--muted); font-size:.78rem; line-height:1.35; margin-top:1px; overflow-wrap:anywhere; }
+
+  /* 常用星號 */
+  .fav-star{
+    position:absolute; top:6px; right:6px; z-index:2;
+    display:grid; place-items:center; width:30px; height:30px; padding:0;
+    border:none; border-radius:10px; background:transparent;
+    color:var(--star-off); cursor:pointer;
+  }
+  .fav-star svg{ width:20px; height:20px; display:block; fill:currentColor; stroke:currentColor; stroke-width:1.4; stroke-linejoin:round; }
+  .fav-star[aria-pressed="true"]{ color:var(--green); }
+  .fav-star:focus-visible{ outline:2px solid var(--blue-dark); outline-offset:1px; }
+
   .variant-row{ display:flex; flex-direction:column; gap:12px; flex:1; }
   .variant{
     position:relative; display:flex; flex-direction:column; gap:8px; flex:1;
@@ -145,11 +148,9 @@
     position:relative; display:flex; align-items:center; justify-content:center;
     height:88px; padding:10px 12px; border-radius:14px;
     background:repeating-conic-gradient(var(--tile-a) 0% 25%, var(--tile-b) 0% 50%) 50%/14px 14px;
-    transition:box-shadow .15s;
   }
-  .variant:hover .logo-well{ box-shadow:inset 0 0 0 1.5px rgba(20,163,139,.45); }
   .variant.selected .logo-well{
-    box-shadow:0 0 0 2px var(--primary-line), inset 0 0 0 999px rgba(20,163,139,.12);
+    box-shadow:0 0 0 2px var(--green), inset 0 0 0 999px var(--green-tint);
   }
   .logo-well img{
     display:block; max-width:100%; max-height:100%;
@@ -160,38 +161,36 @@
     position:absolute; top:8px; left:8px; z-index:1; width:20px; height:20px; margin:0;
     -webkit-appearance:none; appearance:none; cursor:pointer;
     border:1.5px solid #9AA9B5; border-radius:6px; background:#fff;
-    transition:background-color .12s, border-color .12s;
   }
-  .variant .check:hover{ border-color:#0B7F6B; }
   .variant .check:checked{
-    border-color:#0B7F6B;
-    background:#0B7F6B url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center/14px no-repeat;
+    border-color:#16a34a;
+    background:#16a34a url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center/14px no-repeat;
   }
-  .variant .check:focus-visible{ outline:2px solid var(--primary-line); outline-offset:2px; }
+  .variant .check:focus-visible{ outline:2px solid var(--blue-dark); outline-offset:2px; }
 
   .variant .filetype{
     position:absolute; top:8px; right:8px; z-index:1;
     font-size:.65rem; font-weight:700; line-height:1; letter-spacing:.03em;
-    padding:4px 7px; border-radius:999px; background:#E6EAEE; color:#44515E;
+    padding:4px 7px; border-radius:999px;
+    background:rgba(100,116,139,.22); color:#1F2A3C;
   }
-  .filetype.ft-svg{ background:#D9F3EC; color:#0B6B5B; }
-  .filetype.ft-png{ background:#DCEEFB; color:#1B5E8C; }
-  .filetype.ft-jpg, .filetype.ft-jpeg{ background:#FBEACB; color:#8A5A00; }
-  .filetype.ft-eps, .filetype.ft-ai, .filetype.ft-pdf{ background:#E8E3FA; color:#4B3C8F; }
+  .filetype.ft-svg{ background:rgba(34,197,94,.28); }
+  .filetype.ft-png{ background:rgba(135,206,235,.55); }
 
   .variant .label{ min-height:1.3em; font-size:.75rem; line-height:1.3; color:var(--muted); text-align:center; overflow-wrap:anywhere; }
 
   /* 下載：外框按鈕，固定在卡片底端 */
   .variant .dl-btn{
     margin-top:auto; display:flex; align-items:center; justify-content:center; gap:6px;
-    width:100%; height:34px; border:1.5px solid var(--primary-line); border-radius:12px;
-    background:transparent; color:var(--primary-ink);
+    width:100%; height:34px; border:2px solid var(--green); border-radius:12px;
+    background:transparent; color:var(--text);
     font-size:.85rem; font-weight:600; text-decoration:none; cursor:pointer;
     transition:background-color .15s, border-color .15s, transform .05s;
   }
-  .variant .dl-btn:hover{ background:var(--primary-soft); border-color:var(--primary); }
+  .variant .dl-btn svg{ color:var(--green-dark); }
+  .variant .dl-btn:hover{ background:var(--green-tint); border-color:var(--green-dark); }
   .variant .dl-btn:active{ transform:scale(.98); }
-  .variant .dl-btn:focus-visible{ outline:2px solid var(--primary-line); outline-offset:2px; }
+  .variant .dl-btn:focus-visible{ outline:2px solid var(--blue-dark); outline-offset:2px; }
 
   .pending{
     text-align:center; padding:14px; font-size:.78rem; color:var(--muted);
@@ -208,25 +207,22 @@
   }
   .fab-inner{
     pointer-events:auto; display:flex; align-items:center; gap:10px;
-    background:var(--surface); border:1px solid var(--line); border-radius:999px;
+    background:var(--surface); border-radius:999px;
     padding:8px 8px 8px 20px; font-size:.9rem; font-weight:600;
-    box-shadow:0 10px 30px -8px rgba(18,38,63,.28), 0 2px 6px rgba(18,38,63,.08);
+    box-shadow:0 10px 30px -8px rgba(15,23,42,.30), 0 2px 6px rgba(15,23,42,.10);
   }
   .fab-inner button{
     height:38px; padding:0 18px; border:none; border-radius:999px;
-    background:var(--primary); color:var(--on-primary);
-    font:inherit; font-size:.9rem; font-weight:600; cursor:pointer;
+    background:var(--green); color:var(--on-green);
+    font:inherit; font-size:.9rem; font-weight:700; cursor:pointer;
     transition:background-color .15s;
   }
-  .fab-inner button:hover{ background:var(--primary-hover); }
-  .fab-inner button:focus-visible{ outline:2px solid var(--primary-line); outline-offset:2px; }
+  .fab-inner button:hover{ background:var(--green-dark); }
+  .fab-inner button:focus-visible{ outline:2px solid var(--blue-dark); outline-offset:2px; }
   .fab-inner button:disabled{ opacity:.5; cursor:not-allowed; }
   .fab-inner .cancel{ background:none; color:var(--muted); padding:0 10px; font-weight:500; }
-  .fab-inner .cancel:hover{ background:var(--primary-soft); color:var(--text); }
+  .fab-inner .cancel:hover{ background:var(--blue-soft); color:var(--text); }
 
-  @media (max-width:540px){
-    .claude-link{ width:100%; }
-  }
   @media (prefers-reduced-motion: reduce){
     *{ transition:none !important; }
   }
@@ -234,21 +230,20 @@
 </head>
 <body>
 <div class="wrap">
-  <header class="head-row">
-    <div>
-      <h1>品牌 Logo 素材庫</h1>
-      <p class="sub">輸入中文名、英文名或別名搜尋；每家公司若有多個版本（直式/橫式等）會一併顯示，可勾選多筆打包下載</p>
-    </div>
-    <a class="claude-link" href="https://claude.ai/share/aac73642-a039-40df-9d00-d1f606ee0960" target="_blank" rel="noopener">開始尋找/上傳 Logo</a>
+  <header class="head">
+    <h1>品牌 Logo 素材庫</h1>
+    <p class="sub">輸入中文名、英文名或別名搜尋，含多個版本顯示。可勾選多筆打包下載</p>
   </header>
   <div class="controls">
-    <input id="search" type="text" placeholder="例如：台積電 / TSMC" aria-label="搜尋 Logo">
+    <div class="search-row">
+      <input id="search" type="text" placeholder="例如：台積電 / TSMC" aria-label="搜尋 Logo">
+      <a class="claude-link" href="https://claude.ai/share/aac73642-a039-40df-9d00-d1f606ee0960" target="_blank" rel="noopener">開始尋找/上傳 Logo</a>
+    </div>
     <div class="toolbar">
       <div class="chip-group">
         <button id="allBtn" class="chip" type="button">A→Z</button>
         <button id="newestBtn" class="chip" type="button">新→舊</button>
         <button id="favBtn" class="chip" type="button">⭐ 常用Logo</button>
-        <button id="latestBtn" class="chip" type="button">本日新增</button>
       </div>
       <div class="action-group">
         <button id="selectAllBtn" class="chip quiet" type="button">全選目前結果</button>
@@ -275,10 +270,42 @@ let currentList = [];
 let favOnly = false;
 const selected = new Set(); // key = 檔案路徑(唯一)
 
+// 常用星號：以各人瀏覽器的 localStorage 記錄「與 index.json 預設值不同」的項目，不會寫回 index.json
+const FAV_STORE = 'logoLibrary.favOverrides.v1';
+function loadFavOverrides(){
+  try{
+    const o = JSON.parse(localStorage.getItem(FAV_STORE) || '{}');
+    return (o && typeof o === 'object') ? o : {};
+  }catch(e){ return {}; }
+}
+let favOverrides = loadFavOverrides();
+function saveFavOverrides(){
+  try{ localStorage.setItem(FAV_STORE, JSON.stringify(favOverrides)); }catch(e){}
+}
+function favKey(c){ return `${c.中文名稱 || ''}|${c.英文名稱 || ''}`; }
+function isFav(c){
+  const k = favKey(c);
+  return Object.prototype.hasOwnProperty.call(favOverrides, k) ? !!favOverrides[k] : !!c.常用;
+}
+function setStarState(btn, company){
+  const on = isFav(company);
+  const name = company.中文名稱 || company.英文名稱 || '';
+  btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+  btn.setAttribute('aria-label', (on ? '取消常用：' : '加入常用：') + name);
+  btn.title = on ? '取消常用' : '加入常用';
+}
+function toggleFav(company, btn){
+  const next = !isFav(company);
+  const k = favKey(company);
+  if(next === !!company.常用){ delete favOverrides[k]; } else { favOverrides[k] = next; }
+  saveFavOverrides();
+  if(favOnly){ applyFilters(); } else { setStarState(btn, company); }
+}
+
 function getFilteredList(){
   const q = document.getElementById('search').value.trim().toLowerCase();
   let list = allCompanies.filter(company=>{
-    if(favOnly && !company.常用) return false;
+    if(favOnly && !isFav(company)) return false;
     if(!q) return true;
     const pool = [
       company.中文名稱, company.英文名稱, ...(company.別名||[])
@@ -330,6 +357,14 @@ function render(list){
       <div class="name-en">${company.英文名稱 || ''}</div>
     `;
     card.appendChild(head);
+
+    const star = document.createElement('button');
+    star.type = 'button';
+    star.className = 'fav-star';
+    star.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.85 5.95 6.5.85-4.75 4.5 1.2 6.45L12 17.3l-5.8 3.25 1.2-6.45L2.65 9.6l6.5-.85z"/></svg>';
+    setStarState(star, company);
+    star.addEventListener('click', (e)=>{ e.stopPropagation(); toggleFav(company, star); });
+    card.appendChild(star);
 
     const row = document.createElement('div');
     row.className = 'variant-row';
@@ -415,20 +450,6 @@ document.getElementById('favBtn').addEventListener('click', (e)=>{
   favOnly = !favOnly;
   e.target.classList.toggle('active', favOnly);
   applyFilters();
-});
-
-document.getElementById('latestBtn').addEventListener('click', ()=>{
-  const dates = allCompanies.map(c=>c.新增日期).filter(Boolean);
-  if(!dates.length) return;
-  const latest = dates.reduce((a,b)=> (b > a ? b : a));
-  const latestCompanies = allCompanies.filter(c=> c.新增日期 === latest);
-  latestCompanies.forEach(company=>{
-    (company.variants||[]).forEach(v=> selected.add(v.檔案));
-  });
-  favOnly = false;
-  document.getElementById('favBtn').classList.remove('active');
-  document.getElementById('search').value = '';
-  render(latestCompanies);
 });
 
 document.getElementById('selectAllBtn').addEventListener('click', ()=>{
