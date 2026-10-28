@@ -781,6 +781,64 @@
         }
       ],
       "新增日期": "2026-09-24T11:20:00+08:00"
+    },
+    {
+      "中文名稱": "緯創",
+      "英文名稱": "Wistron",
+      "別名": [
+        "緯創資通"
+      ],
+      "variants": [
+        {
+          "標籤": "標準版",
+          "檔案": "assets/緯創_Wistron_logo.svg",
+          "來源網址": "https://commons.wikimedia.org/wiki/File:Wistron_logo.svg",
+          "版權備註": "Wikimedia Commons（Public domain），僅供內部新聞/報導用途使用"
+        }
+      ],
+      "新增日期": "2026-10-28T13:47:00+08:00"
+    },
+    {
+      "中文名稱": "台達電",
+      "英文名稱": "Delta Electronics",
+      "別名": [
+        "台達電子",
+        "台達",
+        "Delta"
+      ],
+      "variants": [
+        {
+          "標籤": "標準版",
+          "檔案": "assets/台達電_DeltaElectronics_logo_標準版.svg",
+          "來源網址": "https://commons.wikimedia.org/wiki/File:DeltaPSU-Logo.svg",
+          "版權備註": "Wikimedia Commons（Public domain），僅供內部新聞/報導用途使用"
+        },
+        {
+          "標籤": "反白版",
+          "檔案": "assets/台達電_DeltaElectronics_logo_反白版.svg",
+          "來源網址": "https://filecenter.deltaww.com/images/logo-w.svg",
+          "版權備註": "官網擷取（白色，適用深色背景），僅供內部新聞/報導用途使用"
+        }
+      ],
+      "新增日期": "2026-10-28T13:47:00+08:00"
+    },
+    {
+      "中文名稱": "光寶",
+      "英文名稱": "LITEON",
+      "別名": [
+        "光寶科技",
+        "Lite-On",
+        "LITEON Technology"
+      ],
+      "variants": [
+        {
+          "標籤": "標準版",
+          "檔案": "assets/光寶_LITEON_logo.svg",
+          "來源網址": "https://commons.wikimedia.org/wiki/File:Liteon-logo.svg",
+          "版權備註": "Wikimedia Commons（Public domain），僅供內部新聞/報導用途使用"
+        }
+      ],
+      "新增日期": "2026-10-28T13:47:00+08:00"
     }
   ]
 }
