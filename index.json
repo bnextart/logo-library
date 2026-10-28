@@ -839,6 +839,62 @@
         }
       ],
       "新增日期": "2026-10-28T13:47:00+08:00"
+    },
+    {
+      "中文名稱": "聖暉",
+      "英文名稱": "Acter Group",
+      "別名": [
+        "聖暉工程",
+        "聖暉工程科技",
+        "Acter",
+        "ACTER GROUP CORPORATION LIMITED"
+      ],
+      "variants": [
+        {
+          "標籤": "標準版",
+          "檔案": "assets/聖暉_ActerGroup_logo.svg",
+          "來源網址": "https://www.acter.com.tw/",
+          "版權備註": "官網擷取（官網首頁內嵌 SVG），僅供內部新聞/報導用途使用"
+        }
+      ],
+      "新增日期": "2026-10-28T18:22:35+08:00"
+    },
+    {
+      "中文名稱": "崇越",
+      "英文名稱": "Topco Scientific",
+      "別名": [
+        "崇越科技",
+        "TSC",
+        "TOPCO",
+        "TOPCO SCIENTIFIC CO., LTD."
+      ],
+      "variants": [
+        {
+          "標籤": "標準版",
+          "檔案": "assets/崇越_TopcoScientific_logo.svg",
+          "來源網址": "https://zh.wikipedia.org/wiki/File:TOPCO_SCIENTIFIC_logo.svg",
+          "版權備註": "中文維基百科（合理使用），僅供內部新聞/報導用途使用"
+        }
+      ],
+      "新增日期": "2026-10-28T18:22:35+08:00"
+    },
+    {
+      "中文名稱": "系統電",
+      "英文名稱": "Sysgration",
+      "別名": [
+        "系統電子",
+        "系統電子工業",
+        "SYSGRATION LTD."
+      ],
+      "variants": [
+        {
+          "標籤": "標準版",
+          "檔案": "assets/系統電_Sysgration_logo.jpg",
+          "來源網址": "https://www.sysgration.com/templates/cadiis/images/ui/logo.jpg",
+          "版權備註": "官網擷取（官網僅提供低解析度 JPG，213×33），僅供內部新聞/報導用途使用"
+        }
+      ],
+      "新增日期": "2026-10-28T18:22:35+08:00"
     }
   ]
 }
