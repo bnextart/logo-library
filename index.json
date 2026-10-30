@@ -956,9 +956,15 @@
       "variants": [
         {
           "標籤": "標準版",
-          "檔案": "assets/數位時代_BusinessNext_logo.svg",
-          "來源網址": "https://commons.wikimedia.org/wiki/File:數位時代_Business_Next_Logo.svg",
-          "版權備註": "Wikimedia Commons（公有領域，由數位時代 Business Next／巨思媒體集團上傳），僅供內部新聞/報導用途使用"
+          "檔案": "assets/數位時代_BusinessNext_logo_標準版.png",
+          "來源網址": "https://cdn.bnextmedia.com.tw/assets/bn/wo-logo.png",
+          "版權備註": "官網（bnext.com.tw）現行 logo，僅提供 PNG（300×137）；官網擷取，僅供內部新聞/報導用途使用"
+        },
+        {
+          "標籤": "反白版",
+          "檔案": "assets/數位時代_BusinessNext_logo_反白版.svg",
+          "來源網址": "https://www.bnextmedia.com.tw/bn/assets/images/26bn-logo.svg",
+          "版權備註": "巨思媒體集團 BN 品牌頁（2026 版）反白 SVG，已裁去四周留白；官網擷取，僅供內部新聞/報導用途使用"
         }
       ],
       "新增日期": "2026-10-30T14:21:15+08:00",
