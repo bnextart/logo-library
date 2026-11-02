@@ -969,6 +969,176 @@
       ],
       "新增日期": "2026-10-30T14:21:15+08:00",
       "常用": true
+    },
+    {
+      "中文名稱": "英飛凌",
+      "英文名稱": "Infineon Technologies",
+      "別名": [
+        "Infineon",
+        "英飛凌科技"
+      ],
+      "variants": [
+        {
+          "標籤": "標準版",
+          "檔案": "assets/英飛凌_Infineon_logo_標準版.svg",
+          "來源網址": "https://www.infineon.com/etc.clientlibs/ifx/components/common/mainnavigation/clientlibs/resources/logo.svg",
+          "版權備註": "官網擷取，僅供內部新聞/報導用途使用"
+        },
+        {
+          "標籤": "反白版",
+          "檔案": "assets/英飛凌_Infineon_logo_反白版.svg",
+          "來源網址": "https://www.infineon.com/content/dam/ifx/Infineon_Logo_Inverted.svg",
+          "版權備註": "官網提供之反白版（白色）；官網擷取，僅供內部新聞/報導用途使用"
+        }
+      ],
+      "新增日期": "2026-11-02T12:30:55+08:00"
+    },
+    {
+      "中文名稱": "華新麗華",
+      "英文名稱": "Walsin Lihwa",
+      "別名": [
+        "華新",
+        "Walsin"
+      ],
+      "variants": [
+        {
+          "標籤": "標準版",
+          "檔案": "assets/華新麗華_WalsinLihwa_logo.svg",
+          "來源網址": "https://www.walsin.com/wp-content/themes/walsin-official/css/img/logo.svg",
+          "版權備註": "官網擷取，僅供內部新聞/報導用途使用"
+        }
+      ],
+      "新增日期": "2026-11-02T12:31:55+08:00"
+    },
+    {
+      "中文名稱": "士林電機",
+      "英文名稱": "Shihlin Electric",
+      "別名": [
+        "士林",
+        "士電",
+        "Shihlin",
+        "SEEC"
+      ],
+      "variants": [
+        {
+          "標籤": "標準版",
+          "檔案": "assets/士林電機_ShihlinElectric_logo_標準版.png",
+          "來源網址": "https://en-esg.seec.com.tw/images/301269",
+          "版權備註": "士林電機 ESG 官網（© 2026）header 之集團企業 logo；官網為 WebP，無損轉成 PNG；僅供內部新聞/報導用途使用"
+        },
+        {
+          "標籤": "北美專站版",
+          "檔案": "assets/士林電機_ShihlinElectric_logo_北美專站版.png",
+          "來源網址": "https://www.shihlin-electric.com/seec/images/logo.png",
+          "版權備註": "北美變壓器專站（www.seec.com.tw 轉址後）使用之藍色閃電版；官網擷取，僅供內部新聞/報導用途使用"
+        },
+        {
+          "標籤": "北美專站版（反白）",
+          "檔案": "assets/士林電機_ShihlinElectric_logo_北美專站版反白.png",
+          "來源網址": "https://www.shihlin-electric.com/seec/images/logo-white.png",
+          "版權備註": "北美變壓器專站之反白版；官網擷取，僅供內部新聞/報導用途使用"
+        }
+      ],
+      "新增日期": "2026-11-02T12:32:55+08:00"
+    },
+    {
+      "中文名稱": "大亞",
+      "英文名稱": "TAYA Group",
+      "別名": [
+        "大亞集團",
+        "大亞電線電纜",
+        "Ta Ya Electric Wire & Cable"
+      ],
+      "variants": [
+        {
+          "標籤": "標準版",
+          "檔案": "assets/大亞_TAYA_logo_標準版.svg",
+          "來源網址": "https://www.taya.com.tw/storage/system/logo/logo.svg",
+          "版權備註": "logo 文字為「TAYA GROUP 大亞集團」；官網擷取，僅供內部新聞/報導用途使用"
+        },
+        {
+          "標籤": "反白版",
+          "檔案": "assets/大亞_TAYA_logo_反白版.png",
+          "來源網址": "https://www.taya.com.tw/storage/system/logo/footer_logo.webp",
+          "版權備註": "官網僅提供 WebP（354×103），無損轉成 PNG；僅供內部新聞/報導用途使用"
+        }
+      ],
+      "新增日期": "2026-11-02T12:33:55+08:00"
+    },
+    {
+      "中文名稱": "華城",
+      "英文名稱": "Fortune Electric",
+      "別名": [
+        "華城電機",
+        "FE"
+      ],
+      "variants": [
+        {
+          "標籤": "官網版（白字）",
+          "檔案": "assets/華城_FortuneElectric_logo.png",
+          "來源網址": "https://www.fortune.com.tw/img/logo.png",
+          "版權備註": "官網只有此版：藍色 TE 標誌＋白色文字，淺色底看不到文字；官網擷取，僅供內部新聞/報導用途使用"
+        }
+      ],
+      "新增日期": "2026-11-02T12:34:55+08:00"
+    },
+    {
+      "中文名稱": "東研信超",
+      "英文名稱": "BTL",
+      "別名": [
+        "BTL Inc.",
+        "東研信超股份有限公司"
+      ],
+      "variants": [
+        {
+          "標籤": "標準版",
+          "檔案": "assets/東研信超_BTL_logo_標準版.png",
+          "來源網址": "https://www.btl.com.tw/images/tw/logo.png",
+          "版權備註": "官網擷取，僅供內部新聞/報導用途使用"
+        },
+        {
+          "標籤": "反白版",
+          "檔案": "assets/東研信超_BTL_logo_反白版.svg",
+          "來源網址": "https://www.btl.com.tw/images/logo_footer.svg",
+          "版權備註": "官網頁尾 SVG，白色文字＋紅色標誌；官網擷取，僅供內部新聞/報導用途使用"
+        }
+      ],
+      "新增日期": "2026-11-02T12:35:55+08:00"
+    },
+    {
+      "中文名稱": "貿聯",
+      "英文名稱": "BizLink",
+      "別名": [
+        "貿聯-KY",
+        "BizLink Holding"
+      ],
+      "variants": [
+        {
+          "標籤": "標準版",
+          "檔案": "assets/貿聯_BizLink_logo.png",
+          "來源網址": "https://www.bizlinktech.com/",
+          "版權備註": "官網首頁 header 圖（AVIF，420×116），無損轉成 PNG；背景為不透明白色；僅供內部新聞/報導用途使用"
+        }
+      ],
+      "新增日期": "2026-11-02T12:36:55+08:00"
+    },
+    {
+      "中文名稱": "康舒",
+      "英文名稱": "AcBel",
+      "別名": [
+        "康舒科技",
+        "AcBel Polytech",
+        "Acbel Polytech Inc."
+      ],
+      "variants": [
+        {
+          "標籤": "黑色版",
+          "檔案": "assets/康舒_AcBel_logo_黑色版.svg",
+          "來源網址": "使用者提供（取自官網 https://www.acbel.com/images/logo-bk.svg）",
+          "版權備註": "官方黑色版字標；c 與 b 之間的方塊為不透明白色，放在非白底會顯示白色方塊；僅供內部新聞/報導用途使用"
+        }
+      ],
+      "新增日期": "2026-11-02T12:37:55+08:00"
     }
   ]
 }
