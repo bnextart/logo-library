@@ -709,10 +709,16 @@
       ],
       "variants": [
         {
-          "標籤": "標準版",
-          "檔案": "assets/脆_Threads_logo.svg",
-          "來源網址": "使用者提供",
-          "版權備註": "僅供內部新聞/報導/影音製作用途使用"
+          "標籤": "app版",
+          "檔案": "assets/脆_Threads_logo_app版.svg",
+          "來源網址": "https://commons.wikimedia.org/wiki/File:Threads_2026_app_icon.svg",
+          "版權備註": "Wikimedia Commons（標示公有領域）；2026 年 5 月 11 日起使用之新 app 圖示；商標；僅供內部新聞/報導用途使用"
+        },
+        {
+          "標籤": "橫式",
+          "檔案": "assets/脆_Threads_logo_橫式.svg",
+          "來源網址": "https://commons.wikimedia.org/wiki/File:Threads-logo-wordmark-black-2026.svg",
+          "版權備註": "Wikimedia Commons（標示公有領域）；2026 年新版符號＋斜體字標組合（黑色）；商標；僅供內部新聞/報導用途使用"
         }
       ],
       "新增日期": "2026-09-24T11:00:00+08:00"
@@ -1661,6 +1667,50 @@
         }
       ],
       "新增日期": "2026-11-23T17:38:41+08:00"
+    },
+    {
+      "中文名稱": "臉書",
+      "英文名稱": "Facebook",
+      "別名": [
+        "FB"
+      ],
+      "variants": [
+        {
+          "標籤": "app版",
+          "檔案": "assets/臉書_Facebook_logo_app版.svg",
+          "來源網址": "https://commons.wikimedia.org/wiki/File:2023_Facebook_icon.svg",
+          "版權備註": "Wikimedia Commons（標示公有領域）；2023 年版圖示（藍色圓形 f）；商標；僅供內部新聞/報導用途使用"
+        },
+        {
+          "標籤": "橫式",
+          "檔案": "assets/臉書_Facebook_logo_橫式.svg",
+          "來源網址": "https://commons.wikimedia.org/wiki/File:Facebook_logo_(2023).svg",
+          "版權備註": "Wikimedia Commons（標示公有領域）；2023 年版字標「facebook」；橫式＝字標；商標；僅供內部新聞/報導用途使用"
+        }
+      ],
+      "新增日期": "2026-11-24T14:49:16+08:00"
+    },
+    {
+      "中文名稱": "Instagram",
+      "英文名稱": "Instagram",
+      "別名": [
+        "IG"
+      ],
+      "variants": [
+        {
+          "標籤": "app版",
+          "檔案": "assets/Instagram_Instagram_logo_app版.svg",
+          "來源網址": "https://commons.wikimedia.org/wiki/File:Instagram_logo_2022.svg",
+          "版權備註": "Wikimedia Commons（標示公有領域）；2022 年 5 月起使用之圖示；商標；僅供內部新聞/報導用途使用"
+        },
+        {
+          "標籤": "橫式",
+          "檔案": "assets/Instagram_Instagram_logo_橫式.svg",
+          "來源網址": "https://commons.wikimedia.org/wiki/File:Instagram_wordmark_(2026).svg",
+          "版權備註": "Wikimedia Commons（標示公有領域）；2026 年 8 月 13 日起使用之新字標；橫式＝字標；商標；僅供內部新聞/報導用途使用"
+        }
+      ],
+      "新增日期": "2026-11-24T14:50:16+08:00"
     }
   ]
 }
